@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(version: 20170728100312) do
   create_table "comments", force: :cascade do |t|
     t.string "content", null: false
     t.string "commenter", null: false
-    t.bigint "article_id_id"
+    t.bigint "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["article_id_id"], name: "index_comments_on_article_id_id"
+    t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
 end

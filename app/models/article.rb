@@ -1,4 +1,7 @@
 class Article < ApplicationRecord
+  validates :title, presence: true
+
+  has_many :comments, dependent: :destroy
 end
 
 # == Schema Information
@@ -13,4 +16,8 @@ end
 #  pre_content :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#
+# Indexes
+#
+#  index_articles_on_title  (title)
 #
